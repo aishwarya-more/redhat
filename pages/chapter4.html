@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>RHCSA</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="../css/intro.css">
+	<link type="text/css" rel="stylesheet" href="../css/chapter.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  	<style type="text/css">
+    	tab1 { padding-left: 40.39999em; }
+
+    	li{
+    		font-size: 16px;
+    		font-weight: bold;
+    		
+    	}
+
+    	.basic-commands b{
+    		font-size: 20px;
+    	}
+    </style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<nav>
+			<div class = "container">
+				<a href="intro.html">Creating users and groups</a>
+				<a href="">Next </a>
+				<a href="">Prev</a>
+				<a href="../index.html">Home</a>
+			</div>
+		</nav>
+		<br><br><br>
+		<div class="container">
+
+			<div class = "basic-commands">
+
+				<h1>Introduction</h1>
+				<br>
+				<p>In practical scenario there can be multiple users using the environment. Linux is a multi-user operating system. In order to do so we need to create different identity for every user in working environment. In every Linux system there is one administrator user also known as <b>superuser</b>. Superuser is the most privileged user and has all the rights and permissions. It goes by the name of <b>root</b>. This name is reserved and cannot be used by any other user or group. Each and every account is unique.</p>
+				<br>
+				<p><b>Creating Users</b></p>
+
+				<p>We will be using <b>useradd</b> utility(command) to create an account for user using command line. In order to create a account type this utility name along with the username which you want to associate with the account.
+					There are various other options which can be included while creating a user. <i>For example</i>, in the below condition a user named <b>student</b> with userid <b>1001</b> is created. This account expires on 31st December 2018, which is enabled with parameter <b>-e</b>. After this date user will be unable to login into this account. </p>
+				<br>
+				<p class="commands jumbotron">user@Desktop:~$ useradd -e 2018-12-31 -u 1001 student </p>
+				<br>
+				<p>You can see the list of the users in the system using following command</p>	
+				<br>
+				<p class="commands jumbotron">user@Desktop:~$ vim /etc/passwd </p>
+				<br>
+				<img src="../images/chapter4/a.png" style="">
+
+
+					
+			</div>
+
+		</div>
+
+		<div class="container">
+			<br><br>
+			<hr style="border-color:#999">
+			<div class="footer">
+				<br>
+				<p style="margin-top:-25px; text-align: center;">Copyright © 2018. All rights reserved.  </p>
+			</div> 
+		</div>
+	</div>
+</body>
+</html>
